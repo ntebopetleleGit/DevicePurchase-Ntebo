@@ -12,6 +12,12 @@ target/
 *.iws
 *.iml
 *.ipr
+.idea/.gitignore
+.idea/DevicePurchase-Ntebo.iml
+idea/copilot.data.migration.ask2agent.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/vcs.xml
 
 ### Eclipse ###
 .apt_generated
