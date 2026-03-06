@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 @Test(dataProvider = "loginData")
 
-public class loginToTheWebsiteToPurchase {
+public class LoginToTheWebsiteToPurchase {
 
         WebDriver driver;
 

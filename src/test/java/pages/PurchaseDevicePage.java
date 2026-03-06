@@ -13,6 +13,7 @@ public class PurchaseDevicePage {
 
     WebDriver driver;
     WebDriverWait wait;
+
     Map<String, By> deviceStorage = new HashMap<>();
     Map<String, By> shippingMethod = new HashMap<>();
     Map<String, By> deviceWarranty = new HashMap<>();
@@ -41,6 +42,7 @@ public class PurchaseDevicePage {
     public PurchaseDevicePage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
 
         deviceStorage.put("64GB", By.id("storage-64GB"));
         deviceStorage.put("128GB", By.id("storage-128GB"));

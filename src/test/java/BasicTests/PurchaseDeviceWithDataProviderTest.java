@@ -1,25 +1,15 @@
 package BasicTests;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeMethod;
+import Base.BaseTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pages.LoginPage;
-import pages.PurchaseDevicePage;
 
-public class purchaseDeviceWithDataProviderTest {
 
-    WebDriver driver;
-    LoginPage loginPage;
-    PurchaseDevicePage purchaseDevicePage;
+public class PurchaseDeviceWithDataProviderTest extends BaseTest {
 
-    @BeforeMethod
-    public void setup() {
-        driver = new ChromeDriver();
-        loginPage = new LoginPage(driver);
-        purchaseDevicePage = new PurchaseDevicePage(driver);
-    }
+
+
+
 
     @Test(dataProvider = "purchaseData")
     public void purchaseDevice(String email, String password, String devType,String devBrand, String devStorage,
@@ -30,7 +20,6 @@ public class purchaseDeviceWithDataProviderTest {
     // complete the transaction.
 
         loginPage.login(email, password);
-
         purchaseDevicePage.fillPurchaseDeviceForm(devType, devBrand, devStorage, devColor, devQuantity,
                 address, shipMethod, warrantyOption, discCode);
 

@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class loginToTheWebsite {
+public class LoginToTheWebsite {
 
     WebDriver driver;
 
