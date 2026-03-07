@@ -43,15 +43,16 @@ public class PurchaseDevicePage {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-
+        // Device storage options
         deviceStorage.put("64GB", By.id("storage-64GB"));
         deviceStorage.put("128GB", By.id("storage-128GB"));
         deviceStorage.put("256GB", By.id("storage-256GB"));
 
+        // Shipping method options
         shippingMethod.put("standard", By.id("shipping-standard"));
         shippingMethod.put("express", By.id("shipping-express"));
 
-        // By deviceWarranty = By.id("warranty-1yr");
+        // Device warranty options
         deviceWarranty.put("None", By.id("warranty-none"));
         deviceWarranty.put("1yr", By.id("warranty-1yr"));
         deviceWarranty.put("2yr", By.id("warranty-2yr"));
@@ -59,12 +60,11 @@ public class PurchaseDevicePage {
     }
 
     public void selectStorageSize(String devStorage) {
-       driver.findElement(deviceStorage.get(devStorage)).click();
+        driver.findElement(deviceStorage.get(devStorage)).click();
     }
 
     public void selectShippingMethod(String shipMethod) {
         driver.findElement(shippingMethod.get(shipMethod)).click();
-        //driver.findElement(shippingMethod.get(shipMethod.toUpperCase())).click();
     }
 
     public void selectDeviceWarranty(String warrantyOption) {

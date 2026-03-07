@@ -8,9 +8,6 @@ import org.testng.annotations.Test;
 public class PurchaseDeviceWithDataProviderTest extends BaseTest {
 
 
-
-
-
     @Test(dataProvider = "purchaseData")
     public void purchaseDevice(String email, String password, String devType,String devBrand, String devStorage,
                                String devColor, String devQuantity, String address, String shipMethod,
